@@ -4,7 +4,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #50a7c2, #b55088);
+  background: linear-gradient(135deg, #50a7c2, #b55088, #50c295);
+  background-size: 200% 200%;
+  animation: gradientBG 10s ease infinite;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -20,7 +22,18 @@ body {
 h1 {
   color: #fff;
   font-size: 48px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   margin: 0;
+}
+
+p {
+  color: #f0f0f0;
+  font-size: 20px;
+  margin: 10px 0 0;
+}
+
+.delay {
+  animation-delay: 0.5s;
 }
 
 .fade-in {
@@ -35,5 +48,17 @@ h1 {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
